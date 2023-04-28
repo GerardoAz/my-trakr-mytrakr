@@ -1,0 +1,36 @@
+$bgColor: lightblue;
+
+body {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.createNewAccount {
+    width: 25%;
+    background: $bgColor;
+    margin-left: auto;
+}
+
+.newTransaction {
+    width: 40%;
+    background: $bgColor;
+}
+
+.summary {
+    width: 25%;
+    background: $bgColor;
+}
+
+.bottom {
+    width: 100%;
+    background: $bgColor;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
