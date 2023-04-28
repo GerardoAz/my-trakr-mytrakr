@@ -14,58 +14,79 @@
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    myTrakr
+    
+    <h1>myTrakr</h1>
+    
     <main>
-      <form action="">
-        New Account:
-        <input type="text" />
-        <button>Add new account</button>
-      </form>
-      <form action="">
-        New Transaction: Deposit
-        <input type="radio" />
-        Withdraw
-        <input type="radio" />
-        Transfer
-        <input type="radio" />
-        Account:
+
+      <div class="createNewAccount">
+        <form action="">
+          New Account:
+          <input type="text" />
+          <button>Add new account</button>
+        </form>
+      </div>
+
+
+      <div class="flex">
+
+        <div class="newTransaction">
+          <form action="">
+            New Transaction: Deposit
+            <input type="radio" />
+            Withdraw
+            <input type="radio" />
+            Transfer
+            <input type="radio" />
+            Account:
+            <select></select>
+
+            From:
+            <select></select>
+
+            To:
+            <select></select>
+            Category:
+            <select></select>
+            <input type="text" />
+            <button type="button">Add new category</button>
+
+            Description
+            <input type="text" />
+
+            Amount:
+            <input type="number" />
+
+            <button>Add transaction</button>
+          </form>
+        </div>
+
+
+        <div class="summary">
+          Account summary
+          <ul></ul>
+        </div>
+
+      </div>
+
+      <div class="bottom">
+        Filter by account:
         <select></select>
+        <table>
+          <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Transaction Type</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>From</th>
+            <th>To</th>
+          </tr>
+        </table>
+      </div>
 
-        From:
-        <select></select>
-
-        To:
-        <select></select>
-        Category:
-        <select></select>
-        <input type="text" />
-        <button type="button">Add new category</button>
-
-        Description
-        <input type="text" />
-
-        Amount:
-        <input type="number" />
-
-        <button>Add transaction</button>
-      </form>
-
-      Account summary
-      <ul></ul>
-      Filter by account:
-      <select></select>
-      <table>
-        <tr>
-          <th>Id</th>
-          <th>Username</th>
-          <th>Transaction Type</th>
-          <th>Category</th>
-          <th>Description</th>
-          <th>Amount</th>
-          <th>From</th>
-          <th>To</th>
-        </tr>
-      </table>
+      
     </main>
     <script src="./js/helpers/Account.js" defer></script>
     <script src="./js/helpers/Category.js" defer></script>
