@@ -1,3 +1,2 @@
-$(() => {
-  //Start coding here!
-});
+import function addNewAccount;
+$(".new-account").click(addNewAccount);
