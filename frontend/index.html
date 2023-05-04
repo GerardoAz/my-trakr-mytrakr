@@ -70,9 +70,15 @@
       </div>
 
       <div class="bottom">
-        Filter by account:
-        <select></select>
-        <table>
+        <div class="filter">
+          Filter by account:
+          <select>
+            <option value="account">Account</option>
+            <option value="category">Category</option>
+            <option value="tType">Transaction Type</option>
+          </select>
+        </div>
+        <table class="listTable">
           <tr>
             <th>Id</th>
             <th>Username</th>
