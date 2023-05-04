@@ -22,6 +22,26 @@ h1 {
 .summary {
     width: 25%;
     background: $bgColor;
+    ul {
+        list-style: none;
+        padding: 0;
+        .liFlex {
+            display: flex;
+            div {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.radioFlex {
+    display: flex;
+    p {
+        margin: 0;
+    }
+    input {
+        display: block;
+    }
 }
 
 .bottom {

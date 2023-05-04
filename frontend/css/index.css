@@ -21,6 +21,26 @@ h1 {
   width: 25%;
   background: lightblue;
 }
+.summary ul {
+  list-style: none;
+  padding: 0;
+}
+.summary ul .liFlex {
+  display: flex;
+}
+.summary ul .liFlex div {
+  width: 50%;
+}
+
+.radioFlex {
+  display: flex;
+}
+.radioFlex p {
+  margin: 0;
+}
+.radioFlex input {
+  display: block;
+}
 
 .bottom {
   width: 100%;
