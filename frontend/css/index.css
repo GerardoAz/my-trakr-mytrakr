@@ -24,11 +24,20 @@ h1 {
 
 .bottom {
   width: 100%;
-  background: lightblue;
 }
 
 .flex {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+}
+
+.filter {
+  margin-bottom: 15px;
+}
+
+.listTable {
+  width: 100%;
+  background: lightblue;
+  border-bottom: 1px solid black;
 }/*# sourceMappingURL=index.css.map */
