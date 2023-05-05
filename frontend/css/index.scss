@@ -22,15 +22,44 @@ h1 {
 .summary {
     width: 25%;
     background: $bgColor;
+    ul {
+        list-style: none;
+        padding: 0;
+        .liFlex {
+            display: flex;
+            div {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.radioFlex {
+    display: flex;
+    p {
+        margin: 0;
+    }
+    input {
+        display: block;
+    }
 }
 
 .bottom {
     width: 100%;
-    background: $bgColor;
 }
 
 .flex {
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
+}
+
+.filter {
+    margin-bottom: 15px;
+}
+
+.listTable {
+    width: 100%;
+    background: $bgColor;
+    border-bottom: 1px solid black;
 }

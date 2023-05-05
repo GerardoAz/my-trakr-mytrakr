@@ -21,14 +21,43 @@ h1 {
   width: 25%;
   background: lightblue;
 }
+.summary ul {
+  list-style: none;
+  padding: 0;
+}
+.summary ul .liFlex {
+  display: flex;
+}
+.summary ul .liFlex div {
+  width: 50%;
+}
+
+.radioFlex {
+  display: flex;
+}
+.radioFlex p {
+  margin: 0;
+}
+.radioFlex input {
+  display: block;
+}
 
 .bottom {
   width: 100%;
-  background: lightblue;
 }
 
 .flex {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+}
+
+.filter {
+  margin-bottom: 15px;
+}
+
+.listTable {
+  width: 100%;
+  background: lightblue;
+  border-bottom: 1px solid black;
 }/*# sourceMappingURL=index.css.map */

@@ -32,47 +32,66 @@
 
         <div class="newTransaction">
           <form action="">
-            New Transaction: Deposit
-            <input type="radio" />
-            Withdraw
-            <input type="radio" />
-            Transfer
-            <input type="radio" />
-            Account:
-            <select></select>
+            <div class="radioFlex">
+              <p>New Transaction:</p>
+              <input type="radio" name="new" value="deposit" checked><label>Deposit</label>
+              <input type="radio" name="new" value="withdraw"><label>Withdraw</label>
+              <input type="radio" name="new" value="transfer"><label>Transfer</label>
+            </div>
 
-            From:
-            <select></select>
+            <div class="summaryAccout">
+              <label>Account:</label>
+              <select class="appendAccount"></select>
+            </div>
 
-            To:
-            <select></select>
-            Category:
-            <select></select>
-            <input type="text" />
-            <button type="button">Add new category</button>
+            <div class="fromTo">
+              <label>From:</label>
+              <select class="appendAccount from"></select>
+              <label>To:</label>
+              <select class="appendAccount to"></select>
+            </div>
 
-            Description
-            <input type="text" />
+            <div class="category">
+              <label>Category:</label>
+              <select></select>
+              <input type="text" />
+              <button>Add new category</button>
+            </div>
 
-            Amount:
-            <input type="number" />
+            <div class="description">
+              <label>Description:</label>
+              <input type="text"/>
+            </div>
 
+            <div class="amount">
+              <label>Amount:</label>
+              <input type="number"/>
+            </div>
+
+            <div class="addTransaction">
             <button>Add transaction</button>
+            </div>
           </form>
         </div>
 
-
         <div class="summary">
-          Account summary
-          <ul></ul>
+          <ul>
+            <li class="liFlex"><div class="account">Account</div><div class="balance">Balance</div></li>
+          </ul>
         </div>
-
       </div>
+      
 
       <div class="bottom">
-        Filter by account:
-        <select></select>
-        <table>
+        <div class="filter">
+          Filter by account:
+          <select>
+            <option value="account">Account</option>
+            <option value="category">Category</option>
+            <option value="tType">Transaction Type</option>
+          </select>
+        </div>
+        <table class="listTable">
           <tr>
             <th>Id</th>
             <th>Username</th>
