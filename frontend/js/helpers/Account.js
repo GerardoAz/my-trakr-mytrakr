@@ -11,6 +11,10 @@ $(document).ready(() => {
       dataType: "json",
     }).done((data) => {
       console.log("Username: ", data);
+      const username = `<option value='${data["id"]}'>${data["username"]}</option>`;
+      $(".appendAccount").append(username);
+      const li = `<li class="liFlex"><div class="${data["id"]}">${data["username"]}</div><div class="balance">0</div></li>`;
+      $("div .summary ul").append(li);
     });
   }
 
