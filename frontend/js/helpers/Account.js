@@ -1,15 +1,18 @@
-function addNewAccount() {
-  const accountInput = $(".createNewAccount input[type=text]").val();
-  $.ajax({
-    method: "post",
-    data: {
-      username: accountInput,
-    },
-    URL: "http://localhost:3000/accounts",
-    dataType: "json",
-  }).done((data) => {
-    console.log("Username: ", data);
-  });
-}
+$(document).ready(() => {
+  function addNewAccount(event) {
+    event.preventDefault();
+    const accountInput = $('.createNewAccount input[type="text"]').val();
+    $.ajax({
+      method: "post",
+      data: {
+        newAccount: accountInput,
+      },
+      url: "http://localhost:3000/accounts",
+      dataType: "json",
+    }).done((data) => {
+      console.log("Username: ", data);
+    });
+  }
 
-$(".createNewAccounnt button").on("click", addNewAccount());
+  $("#accountForm").on("submit", (e) => addNewAccount(e));
+});
