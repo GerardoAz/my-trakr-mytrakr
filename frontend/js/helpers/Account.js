@@ -15,6 +15,7 @@ $(document).ready(() => {
       $(".appendAccount").append(username);
       const li = `<li class="liFlex"><div class="${data["id"]}">${data["username"]}</div><div class="balance">0</div></li>`;
       $("div .summary ul").append(li);
+      $('.createNewAccount input[type="text"]').val(" ");
     });
   }
 
