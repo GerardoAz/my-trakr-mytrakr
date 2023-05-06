@@ -10,12 +10,12 @@ $(document).ready(() => {
       url: "http://localhost:3000/accounts",
       dataType: "json",
     }).done((data) => {
-      console.log("Username: ", data);
+      //console.log("Username: ", data);
       const username = `<option value='${data["id"]}'>${data["username"]}</option>`;
       $(".appendAccount").append(username);
-      const li = `<li class="liFlex"><div class="${data["id"]}">${data["username"]}</div><div class="balance">0</div></li>`;
+      const li = `<li class="liFlex"><div class="${data["id"]}">${data["username"]}</div><div>0</div></li>`;
       $("div .summary ul").append(li);
-      $('.createNewAccount input[type="text"]').val(" ");
+      $('.createNewAccount input[type="text"]').val("");
     });
   }
 
