@@ -69,7 +69,7 @@
             </div>
 
             <div class="addTransaction">
-            <button>Add transaction</button>
+            <button id="refresh">Add transaction</button>
             </div>
           </form>
         </div>
@@ -84,25 +84,28 @@
 
       <div class="bottom">
         <div class="filter">
-          Filter by account:
+          Filter by:
           <select>
             <option value="account">Account</option>
             <option value="category">Category</option>
             <option value="tType">Transaction Type</option>
           </select>
         </div>
-        <table class="listTable">
-          <tr>
-            <th>Id</th>
-            <th>Username</th>
-            <th>Transaction Type</th>
-            <th>Category</th>
-            <th>Description</th>
-            <th>Amount</th>
-            <th>From</th>
-            <th>To</th>
-          </tr>
-        </table>
+        <div class="grid">
+          <table class="listTable">
+            <tr>
+              <th>Id</th>
+              <th>Username</th>
+              <th>Transaction Type</th>
+              <th>Category</th>
+              <th>Description</th>
+              <th>Amount</th>
+              <th>From</th>
+              <th>To</th>
+            </tr>
+          </table>
+          <div id="table"></div>
+        </div>
       </div>
 
       
