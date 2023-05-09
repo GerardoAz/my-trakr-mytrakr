@@ -11,8 +11,11 @@ export function addCategory(){
       url: `http://localhost:3000/categories`,
       dataType: "json",
   }).done((data) => {
-      $(".category select").append(`<option value='${data["id"]}'>${data["name"]}</option>`);
-      $('.category input[type="text"]').val("");
+        $(".category select option.addNewCategory").remove()
+        $(".category select").append(`<option value='${data["id"]}'>${data["name"]}</option>`);
+        $(".category select").append(`<option class="addNewCategory">+Add New Category</option>`);
+        $(".category .hidden").css("display", "none")
+        $('.category input[type="text"]').val("");
   });
 }
 
@@ -27,6 +30,10 @@ export function getCategory(){
       data.forEach((val,index)=>{
           $(".category select").append(`<option value='${val["id"]}'>${val["name"]}</option>`);
       });
+
+      if($(".category select option.addNewCategory")!==true){
+        $(".category select").append(`<option class="addNewCategory">+Add New Category</option>`);
+        }
   });
 }
 
@@ -59,7 +66,16 @@ export function SwitchRadiobuttons(){
   $('.radioFlex input[value="transfer"]').on("click", ()=>{
     $(".fromTo").css("display","block");
     $(".summaryAccout").css("display","none");
-});
+    });
+}
+//////////////////////// Toggle Add New Account ////////////////////////
+export function toggleAddNewAccount(){
+    const add=$(".category select option.addNewCategory")
+        if(add.is(":selected")==true){
+            $(".category .hidden").css("display", "block")
+        }else if(add.is(":selected")!==true){
+            $(".category .hidden").css("display", "none")
+        }
 }
 
 export default {addCategory, getCategory, getAccount, SwitchRadiobuttons}

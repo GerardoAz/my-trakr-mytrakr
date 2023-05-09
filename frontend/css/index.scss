@@ -1,35 +1,116 @@
 $bgColor: lightblue;
+$tr: rgb(213, 233, 240);
+$title: rgb(130, 194, 255);
 
 body {
-    margin: 20px;
+    margin: 0 40px 20px;
+}
+
+* {
+    font-family: sans-serif;
 }
 
 h1 {
+    font-size: 2em;
     text-align: center;
 }
 
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0 0 10px;
+}
+
 .createNewAccount {
-    width: 25%;
-    background: $bgColor;
+    width: 45%;
     margin-left: auto;
+    form {
+        width: fit-content;
+        margin-left: auto;
+        input {
+        height: 20px;
+        }
+    }
 }
 
 .newTransaction {
-    width: 40%;
-    background: $bgColor;
+    width: 45%;
+    box-sizing: border-box;
+    form{
+        background: $bgColor;
+        padding: 15px;
+        .radioFlex {
+        margin: 3px 0;
+            input[type='radio'] {
+                margin: 0;
+            }
+            label.labelForTransaction {
+                width: 15%;
+                padding-left: 5px;
+            }
+        }
+
+        div.fromTo {
+            .labelTo {
+                margin-left: 20px;
+            }
+        }
+
+        option.addNewCategory {
+            color: blue;
+            font-weight: bold;
+        }
+
+        input {
+            height: 20px;
+            margin: 3px 0;
+        }
+
+        select {
+            height: 25px;
+            margin: 3px 0;
+        }
+        
+        .left {
+            display: inline-block;
+            width: 20%;
+            margin-left: 10%;
+        }
+
+        .addTransaction {
+            text-align: center;
+            #refresh {
+                margin-top: 20px;
+            }
+        }
+    }
 }
 
 .summary {
-    width: 25%;
-    background: $bgColor;
+    width: 45%;
     ul {
         list-style: none;
         padding: 0;
+        margin: 0;
         .liFlex {
             display: flex;
+            background:$bgColor;
             div {
                 width: 50%;
+                padding: 5px;
+                padding-left: 20px;
+                outline: 1px solid white;
             }
+            div.account, div.balance {
+                background-color: $title;
+                padding: 5px;
+                text-align: center;
+                outline:none;
+                border-bottom: 2px solid white;
+            }
+        }
+        .liFlex:nth-child(2n) {
+            background:$tr;
         }
     }
 }
@@ -51,7 +132,7 @@ h1 {
 .flex {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 20px 0 30px;
 }
 
 .filter {
@@ -60,10 +141,42 @@ h1 {
 
 .listTable {
     width: 100%;
-    background: $bgColor;
-    border-bottom: 1px solid black;
+    background-color:$title;
+    th {
+        font-weight: normal;
+        width: 12%;
+        padding: 5px;
+        }
 }
 
 .table {
+    border: none;
     width: 100%;
+    td {
+        border: none;
+        width: 12%;
+        padding: 5px;
+        padding-left: 20px;
+    }
+
+    tr {
+        background-color: $tr;
+    }
+
+    tr:nth-child(2n) {
+        background-color: $bgColor;
+    }
 }
+
+button {
+    border-radius: 4px;
+    color: white;
+    background-color:darkcyan;
+    border: none;
+    padding: 4px 7px;
+}
+
+button:hover {
+    background-color:rgb(0, 95, 95);
+}
+
