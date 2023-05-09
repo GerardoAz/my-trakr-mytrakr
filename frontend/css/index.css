@@ -1,35 +1,107 @@
 body {
-  margin: 20px;
+  margin: 0 40px 20px;
+}
+
+* {
+  font-family: sans-serif;
 }
 
 h1 {
+  font-size: 2em;
   text-align: center;
 }
 
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
 .createNewAccount {
-  width: 25%;
-  background: lightblue;
+  width: 45%;
   margin-left: auto;
+}
+.createNewAccount form {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+}
+.createNewAccount form input {
+  height: 20px;
 }
 
 .newTransaction {
-  width: 40%;
+  width: 45%;
+  box-sizing: border-box;
+}
+.newTransaction form {
   background: lightblue;
+  padding: 15px;
+}
+.newTransaction form .radioFlex {
+  margin: 3px 0;
+}
+.newTransaction form .radioFlex input[type=radio] {
+  margin: 0;
+}
+.newTransaction form .radioFlex label.labelForTransaction {
+  width: 15%;
+  padding-left: 5px;
+}
+.newTransaction form div.fromTo .labelTo {
+  margin-left: 20px;
+}
+.newTransaction form option.addNewCategory {
+  color: blue;
+  font-weight: bold;
+}
+.newTransaction form input {
+  height: 20px;
+  margin: 3px 0;
+}
+.newTransaction form select {
+  height: 25px;
+  margin: 3px 0;
+}
+.newTransaction form .left {
+  display: inline-block;
+  width: 20%;
+  margin-left: 10%;
+}
+.newTransaction form .addTransaction {
+  text-align: center;
+}
+.newTransaction form .addTransaction #refresh {
+  margin-top: 20px;
 }
 
 .summary {
-  width: 25%;
-  background: lightblue;
+  width: 45%;
 }
 .summary ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .summary ul .liFlex {
   display: flex;
+  background: lightblue;
 }
 .summary ul .liFlex div {
   width: 50%;
+  padding: 5px;
+  padding-left: 20px;
+  outline: 1px solid white;
+}
+.summary ul .liFlex div.account, .summary ul .liFlex div.balance {
+  background-color: rgb(130, 194, 255);
+  padding: 5px;
+  text-align: center;
+  outline: none;
+  border-bottom: 2px solid white;
+}
+.summary ul .liFlex:nth-child(2n) {
+  background: rgb(213, 233, 240);
 }
 
 .radioFlex {
@@ -49,7 +121,7 @@ h1 {
 .flex {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 20px 0 30px;
 }
 
 .filter {
@@ -58,10 +130,39 @@ h1 {
 
 .listTable {
   width: 100%;
-  background: lightblue;
-  border-bottom: 1px solid black;
+  background-color: rgb(130, 194, 255);
+}
+.listTable th {
+  font-weight: normal;
+  width: 12%;
+  padding: 5px;
 }
 
 .table {
+  border: none;
   width: 100%;
+}
+.table td {
+  border: none;
+  width: 12%;
+  padding: 5px;
+  padding-left: 20px;
+}
+.table tr {
+  background-color: rgb(213, 233, 240);
+}
+.table tr:nth-child(2n) {
+  background-color: lightblue;
+}
+
+button {
+  border-radius: 4px;
+  color: white;
+  background-color: darkcyan;
+  border: none;
+  padding: 4px 7px;
+}
+
+button:hover {
+  background-color: rgb(0, 95, 95);
 }/*# sourceMappingURL=index.css.map */

@@ -31,50 +31,56 @@
       <div class="flex">
 
         <div class="newTransaction">
+          <h2>New Transaction</h2>
           <form action="">
             <div class="radioFlex">
-              <p>New Transaction:</p>
-              <input type="radio" name="new" value="deposit" checked><label>Deposit</label>
-              <input type="radio" name="new" value="withdraw"><label>Withdraw</label>
-              <input type="radio" name="new" value="transfer"><label>Transfer</label>
+              <label class="left">Transaction:</label>
+              <input type="radio" name="new" value="deposit" checked><label class="labelForTransaction">Deposit</label>
+              <input type="radio" name="new" value="withdraw"><label class="labelForTransaction">Withdraw</label>
+              <input type="radio" name="new" value="transfer"><label class="labelForTransaction">Transfer</label>
             </div>
 
             <div class="summaryAccout">
-              <label>Account:</label>
+              <label class="left">Account:</label>
               <select class="appendAccount"></select>
             </div>
 
             <div class="fromTo">
+              <label class="left">Account:</label>
               <label>From:</label>
               <select class="appendAccount from"></select>
-              <label>To:</label>
+              <label class="labelTo">To:</label>
               <select class="appendAccount to"></select>
             </div>
 
             <div class="category">
-              <label>Category:</label>
+              <label class="left">Category:</label>
               <select></select>
-              <input type="text" />
-              <button>Add new category</button>
+              <div class="hidden" style="display:none;">
+                <label class="left"></label>
+                <input type="text" />
+                <button>+Add</button>
+              </div>
             </div>
 
             <div class="description">
-              <label>Description:</label>
+              <label class="left">Description:</label>
               <input type="text"/>
             </div>
 
             <div class="amount">
-              <label>Amount:</label>
+              <label class="left">Amount:</label>
               <input type="number"/>
             </div>
 
             <div class="addTransaction">
-            <button id="refresh">Add transaction</button>
+              <button id="refresh">+Add transaction</button>
             </div>
           </form>
         </div>
 
         <div class="summary">
+          <h2>Account Summary</h2>
           <ul>
             <li class="liFlex"><div class="account">Account</div><div class="balance">Balance</div></li>
           </ul>
