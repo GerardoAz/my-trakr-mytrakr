@@ -1,6 +1,6 @@
 
 import {addTransaction, getTransaction} from './helpers/Transaction.js';
-import {addCategory, getCategory, getAccount, SwitchRadiobuttons} from './helpers/Category.js';
+import {addCategory, getCategory, getAccount, SwitchRadiobuttons, toggleAddNewAccount} from './helpers/Category.js';
 
 SwitchRadiobuttons();
 getAccount();
@@ -15,6 +15,10 @@ $(".addTransaction").on("click", (e)=>{
 $(".category button").on("click", (e)=>{
     e.preventDefault();
     addCategory();
+})
+
+$(".category select").on("change",()=>{
+    toggleAddNewAccount();
 })
 
 $(document).ready(function() {
